@@ -7,29 +7,16 @@ body{
     padding: 0;
     weight: 100%;
 }
+
 .link-color{
     color: blue;
 }
 
 .my-photo{
-    border-radius: 25px;
+    border-radius: 100px;
 }
 
 .back-box{
     margin: 5% 5% 5% 5% ;
     background-color: white;
-}
-
-#underline{
-    text-decoration: underline;
-    text-decoration-color: black
-}
-
-#rw-title{
-    font-size: 34;
-    position: relative;
-}
-
-#title-box{
-    
 }
