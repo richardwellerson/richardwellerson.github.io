@@ -3,10 +3,9 @@ body {
     background-color: rgb(46, 46, 251);
     margin: 0;
     color: white;
-    position: relative;
 
 }
-.body-title{
+.body-title {
     color: black;
 }
 
@@ -21,17 +20,17 @@ header {
     color: black;
 }
 
-.first-title{
+.first-title {
     float: left;
 }
 
-.navigation{
+.navigation {
     text-align: right;
     line-height: 30px;
     margin: 25px;
 }
 
-.img-life{
+.img-life {
     width: 150px;
     float: left;
     margin-left: 1%;
@@ -39,7 +38,7 @@ header {
     border-radius: 100%;
     border: 2px solid white;
 }
-.margin-first-title{
+.margin-first-title {
     margin: 5px;
 }
 
@@ -47,26 +46,62 @@ header {
     text-align: center;
 }
 
-.background-1stpart{
+.background-1stpart {
     background-color: yellowgreen;
     padding-top: 100px;
 }
 
-.background-2ndpart{
+.background-2ndpart {
     background-color: rgb(46, 46, 251);
-    text-align: center;
     padding-top: 50px
 }
 
-#career{
-    color: white;
+.background-3rdpart {
+    background-color: yellowgreen;
+    padding-top: 50px
+    bottom: 50px;
 }
 
-.img-career{
+#career {
+    text-align: center;
+}
+
+.img-career {
     width: 150px;
     float: right;
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 20%;
     border: 2px solid white;    
+}
+.ytvideo {
+    padding-top: 50px;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 25px;
+    font-size: 25px;
+}
+
+ul {
+    line-height: 25px;
+    font-size: 25px;
+}
+
+#songs {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+
+}
+
+.rodape {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(46, 46, 251);
+}
+
+h5 {
+    text-align: center;
 }
