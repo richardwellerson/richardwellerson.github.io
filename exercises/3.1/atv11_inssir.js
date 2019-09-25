@@ -1,4 +1,4 @@
-salario = 9000
+salario = 988
 aliq8 = 0.08
 aliq9 = 0.09
 aliq11 = 0.11
@@ -8,7 +8,7 @@ inssAliq9 = (salario - (salario * 0.09))
 inssAliq11 = (salario - (salario * 0.11))
 inssAliqMax = (salario - 570.88)
 irrf0 = salario
-irrf7 = (salario - (salario * 0.75) + 142.8)
+irrf7 = (salario - (salario * 0.075) + 142.8)
 irrf15 = (salario - (salario * 0.15) + 354.8)
 irrf225 = (salario - (salario * 0.225) + 636.13)
 irrf275 = (salario - (salario * 0.275) + 869.36)
@@ -22,13 +22,11 @@ if (salario < 1556.94){
     salarioINSS = inssAliq11
 } else if (salario > 5189.82) {
     salarioINSS = inssAliqMax
-} else if(salario <= 0) {
-    console.log("Digite um valor válido!")
 }
 
 // Cálculo valor desconto IRRF.
-if (salario <= 0 && salario <= 1903.88) {
-    salarioIRRF = salario
+if (salario <= 1903.88) {
+    salarioIRRF = irrf0
 } else if (salario >= 1903.89 && salario <= 2826.65) {
     salarioIRRF = irrf7
 } else if (salario >= 2826.66 && salario <= 3751.05) {
@@ -37,12 +35,10 @@ if (salario <= 0 && salario <= 1903.88) {
     salarioIRRF = irrf225
 } else if (salario >= 4664.69) {
     salarioIRRF = irrf275
-} else if (salario <= 0) {
-    console.log("Digite um valor válido!")
 }
 
 descontoINSS = (salario - salarioINSS)
-descontoINSSarred =parseFloat(descontoINSS.toFixed(2))
+descontoINSSarred = parseFloat(descontoINSS.toFixed(2))
 
 descontoIRRF = (salario - salarioIRRF)
 descontoIRRFarred = parseFloat(descontoIRRF.toFixed(2))
@@ -50,6 +46,10 @@ descontoIRRFarred = parseFloat(descontoIRRF.toFixed(2))
 salarioLiquido = salario - descontoIRRF - descontoINSS
 salarioLiquidoArredondado = parseFloat(salarioLiquido.toFixed(2))
 
-console.log("O desconto do seu INSS foi de "+descontoINSSarred+".\n");
-console.log("O desconto do IRRF foi de "+descontoIRRFarred+".\n");
-console.log("Seu salário líquido é de "+(salarioLiquidoArredondado+".\n"))
+if (salarioLiquido > 0) {
+    console.log("O desconto do seu INSS foi de "+descontoINSSarred+".\n");
+    console.log("O desconto do IRRF foi de "+descontoIRRFarred+".\n");
+    console.log("Seu salário líquido é de "+(salarioLiquidoArredondado+".\n"))
+} else {
+    console.log("Digite um valor válido.")
+}
