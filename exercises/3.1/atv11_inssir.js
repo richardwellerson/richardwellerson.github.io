@@ -1,4 +1,4 @@
-salario = 988
+salario = 10000
 aliq8 = 0.08
 aliq9 = 0.09
 aliq11 = 0.11
