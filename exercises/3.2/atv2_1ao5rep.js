@@ -5,5 +5,3 @@ for( i = 0; i < star; i++) {
     listaAdicionar = listaAdicionar+"*";
     console.log(listaAdicionar);
 }
-
-   
