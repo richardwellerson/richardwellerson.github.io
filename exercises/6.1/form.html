@@ -95,7 +95,43 @@
                            required="required"/>
                     <label for="radio-apartment">Apartamento</label>               
                 </fieldset>
-            </form> 
+
+                <br><br>
+
+                <fieldset class="profissional-data">
+                    <legend>Dados Profissionais</legend>
+                    <p>Resumo do Curriculo</p>
+                    <textarea type="text" 
+                              id="abstract"
+                              name="applicant-abstract"
+                              maxlength="1000"
+                              rows="10"
+                              cols="50"
+                              required="required">                              
+                    </textarea>
+                    <p>Cargo</p>
+                    <input type="text" 
+                           id="function"
+                           name="applicant-function"
+                           maxlength="40"
+                           required="required"/>
+                    <p>Descrição do Cargo</p>
+                    <input type="text" 
+                           id="function-description"
+                           name="applicant-function-description"
+                           maxlength="500"
+                           required="required"/>
+                    <p>Data de Início</p>
+                    <input type="text" 
+                           id="start-date"
+                           name="applicant-start-date"
+                           maxlength="10"
+                           required="required"/>
+                </fieldset>
+            </form>
+            <br>
+            <button class="send-info">Enviar</button>
+            <button class="clear-info">Limpar Tudo</button>
         </div>   
         <script type="text/javascript" src="script.js"></script>   
     </body>
