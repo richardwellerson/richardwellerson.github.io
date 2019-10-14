@@ -1,4 +1,13 @@
 body {
     text-align: center;
     font-family: 'Nunito', sans-serif;
+    margin: 3% 10%;
+}
+
+legend{
+    text-align: left;
+}
+
+.all-data {
+    text-align: left;
 }

@@ -11,15 +11,92 @@
 
     <body>
         <header>
-            <h1>Curriculo Trybe</h1>
+            <h1>Curriculo Monera</h1>
             <h2><em>Vem com a gente!</em></h2>
         </header>
-        <form action="" method="POST">
-            <fieldset class="personal-data">
-                <p>teste</p>
-            
-            </fieldset>
-        </form>    
+        <div class="all-data">
+            <form action="" method="POST">
+                <fieldset class="personal-data">
+                    <legend>Dados Pessoais</legend>
+                    <p>Nome</p>
+                    <input type="text" 
+                           id="name"
+                           name="applicant-name"
+                           maxlength="40"
+                           required="required"/>
+                    <p>E-mail</p>
+                    <input type="text" 
+                           id="email"
+                           name="applicant-email"
+                           maxlength="50"
+                           required="required"/>
+                    <p>CPF</p>
+                    <input type="text" 
+                           id="cpf"
+                           name="applicant-document"
+                           maxlength="11"
+                           required="required"/>
+                    <p>Endereço</p>
+                    <input type="text" 
+                           id="adress"
+                           name="applicant-adress"
+                           maxlength="200"
+                           required="required"/>
+                    <p>Cidade</p>
+                    <input type="text" 
+                           id="city"
+                           name="applicant-city"
+                           maxlength="28"
+                           required="required"/>
+                    <p>Estado</p>
+                    <div class="state">
+                        <label for="state-br"></label>
+                        <select name="applicant-state" id="state-br">
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                        </select>   
+                    </div>
+                    <p>Tipo</p>
+                    <input type="radio" 
+                           id="radio-house"
+                           name="applicant-type"
+                           maxlength="40"
+                           required="required"/>
+                    <label for="radio-house">Casa</label>
+                    <input type="radio" 
+                           id="radio-apartment"
+                           name="applicant-type"
+                           maxlength="40"
+                           required="required"/>
+                    <label for="radio-apartment">Apartamento</label>               
+                </fieldset>
+            </form> 
+        </div>   
         <script type="text/javascript" src="script.js"></script>   
     </body>
 </html>
