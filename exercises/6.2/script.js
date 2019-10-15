@@ -40,15 +40,4 @@ for (let key in stateBrAll) {
     addOptionTag(key, stateBrAll[key])
 }
 
-function sendToDivInfo(){
-    let captureButtonSubmit = document.getElementById("send-info")
-    captureButtonSubmit.addEventListener("click", function(){
-        let captureDivShowText = document.querySelector("#compress-data")
-        let formInfoFull = document.getElementsByTagName("input").value
-        captureDivShowText.appendChild(formInfoFull)
-
-    })
-}
-
-
-
+let dateCheck = document.getElementById("start-date").DatePickerX.init()
