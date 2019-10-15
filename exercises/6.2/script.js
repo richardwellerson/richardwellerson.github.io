@@ -44,12 +44,10 @@ function sendToDivInfo(){
     let captureButtonSubmit = document.getElementById("send-info")
     captureButtonSubmit.addEventListener("click", function(){
         let captureDivShowText = document.querySelector("#compress-data")
-        let formInfoFull = document.getElementsByTagName("input")
-        captureDivShowText.appendChild(formInfoFull[0])
+        let formInfoFull = document.getElementsByTagName("input").value
+        captureDivShowText.appendChild(formInfoFull)
 
     })
-
-
 }
 
 
