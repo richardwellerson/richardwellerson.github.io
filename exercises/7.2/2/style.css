@@ -1,6 +1,12 @@
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+  
+*, *:before, *:after {
     box-sizing: inherit;
-  }
+}
+
+body{
+    word-break: normal;
+    margin: 18px;
+}
