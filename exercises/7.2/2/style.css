@@ -10,3 +10,11 @@ body{
     word-break: normal;
     margin: 18px;
 }
+
+@media screen and (max-width: 500px){
+    body {
+        background-color: wheat;
+        font-size: 0.8em;
+    }
+
+}
