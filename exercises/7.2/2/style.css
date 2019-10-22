@@ -11,10 +11,26 @@ body{
     margin: 18px;
 }
 
-@media screen and (max-width: 500px){
+i {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 527px){
     body {
         background-color: wheat;
         font-size: 0.8em;
     }
 
+}
+
+@media screen and (min-width: 528px) and (max-width: 1000px) {
+    body {
+        background-color: snow;
+        font-size: 1.2em;
+        text-align: justify;
+    }
+
+    article {
+        columns: 2;
+    }
 }
