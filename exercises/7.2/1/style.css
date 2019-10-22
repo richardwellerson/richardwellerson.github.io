@@ -30,15 +30,30 @@ figure {
     
     body {
         background-color: bisque;
+        word-break: normal;
     }
 
     figure {
-        width: 40%;
+        width: 35%;
     }
 
     .align-images{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 800px){
+    * {
+        font-size: 1.5em;
+    }
+
+    figure {
+        width: 16%;
+    }
+
+    body {
+        background-color: aliceblue;
     }
 }
