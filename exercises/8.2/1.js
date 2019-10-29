@@ -66,11 +66,9 @@ const books = [
 console.log(books[0].author.birthYear)
 
 function authorBornIn1947() {
-    for(let key in books){
-        let loopInBooks = books[key].author.birthYear
-        loopInBooks.find(1947)
-        return authorBornIn1947()
-    }
+    const name = books.find(book => book.author.birthYear == 1947)
+      return name.author.name;
 }
+
 
 assert.equal(authorBornIn1947(), 'Stephen King')
