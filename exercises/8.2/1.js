@@ -63,8 +63,14 @@ const books = [
   },
 ];
 
-function authorBornIn1947(author1947) {
-    return author1947.find(books.author.birthYear == 1947)
+console.log(books[0].author.birthYear)
+
+function authorBornIn1947() {
+    for(let key in books){
+        let loopInBooks = books[key].author.birthYear
+        loopInBooks.find(1947)
+        return authorBornIn1947()
+    }
 }
 
-assert.equal(authorBornIn1947(), 'Stephen King');
+assert.equal(authorBornIn1947(), 'Stephen King')
