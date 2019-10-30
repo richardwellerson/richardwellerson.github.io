@@ -1,11 +1,11 @@
 const longestWord = ("Antônio foi no banheiro e não sabemos o que aconteceu")
-const arrayWords = longestWord.split(" ");
-let biggerWord = [];
+const arrayWords = longestWord.split(" ")
+let biggerWord = ""
 
-for(let word of arrayWords){
-    console.log(word.length, word)
-    if (word.length > biggerWord.lenght){
-        biggerWord.push(word)
+for(let i = 0 ; i < arrayWords.length; i++){
+    if(arrayWords[i].length > biggerWord.length){
+        biggerWord = arrayWords[i]
     }
 }
-console.log (biggerWord)
+
+console.log(`A maior palavra do array é ${biggerWord}, que possui ${biggerWord.length} caracteres.`)
