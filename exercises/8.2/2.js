@@ -75,7 +75,7 @@ const expected_result = {
 }
 
 function authorWith3DotsOnName() {
-  // escreva seu código aqui
+    const search3Dots = 
 }
 
 assert.deepEqual(authorWith3DotsOnName(), expected_result);
