@@ -73,9 +73,13 @@ const expected_result = {
   },
   releaseYear: 1954,
 }
+const regexToCompare = /^[A-Z]\.\W[A-Z]\.\W[A-Z]\.\W/
 
 function authorWith3DotsOnName() {
-    const search3Dots = 
+    const searchBook = books.find(book => regexToCompare.test(book.author.name))
+    return searchBook
 }
 
 assert.deepEqual(authorWith3DotsOnName(), expected_result);
+
+console.log('Ok!')
