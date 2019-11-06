@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leitor de texto</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <header>
@@ -15,7 +14,7 @@
         <h4>Personalize o texto a seu agrado!</h4>
     </header>
     <div class="change-attributes-text">
-        <h6>Selecione os atributos:</h6>
+        <h3>Selecione os atributos:</h3>
         <div>
             <p>Cor da Fonte</p>
             <input type="color" name="font-color" id="font">
@@ -31,9 +30,19 @@
         </div>
         <div>
             <p>Espaçamento do texto</p>
-            <button class="small-font">-</button>
-            <button class="large-font">+</button>
+            <button class="small-text-spacing">-</button>
+            <button class="large-text-spacing">+</button>
         </div>
+        <div>
+            <p>Tipo da Fonte</p>
+            <select>
+                <option value="verdana">Verdana</option>
+                <option value="comic-sans">Comic Sans</option>
+                <option value="times-new-roman">Times New Roman</option>
+                <option value="arial">Arial</option>
+            </select>
+        </div>
+    </div>
     <article>
         <section>
             <p>Evidentemente, a execução dos pontos do programa nos obriga à análise das condições financeiras e
@@ -71,6 +80,7 @@
                 envolvidas.</p>
         </section>
     </article>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
