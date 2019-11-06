@@ -1,8 +1,16 @@
+* {
+    outline: 1px solid red;
+}
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+p {
+    padding: 0% 1%;
 }
 
 
