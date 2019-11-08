@@ -1,16 +1,20 @@
+let textColor = document.getElementById('font')
+let backgroundColor = document.getElementById('background')
 let smallFont = document.querySelector('.small-font')
 let largeFont = document.querySelector('.large-font')
-let textColor = document.getElementById('font')
+let lessSpace = document.querySelector('.small-text-spacing')
+let mostSpace = document.querySelector('.large-text-spacing')
+let fontFamily = document.querySelectorAll('option')
 let articleParagraphs = document.querySelectorAll('article p')
-let backgroundColor = document.getElementById('background')
+
 
 const changeColor = () => {
-    for(let i = 0; i < articleParagraphs.length; i++) {
+    for (let i = 0; i < articleParagraphs.length; i++) {
         articleParagraphs[i].style.color = localStorage.color
         textColor.addEventListener('input', () => {
             localStorage.setItem('color', textColor.value)
             articleParagraphs[i].style.color = localStorage.color
-        })  
+        })
         articleParagraphs[i].style.backgroundColor = localStorage.background
         backgroundColor.addEventListener('input', () => {
             localStorage.setItem('background', backgroundColor.value)
@@ -19,7 +23,12 @@ const changeColor = () => {
     }
 }
 
-
-
+const changeFontFamily = () => {
+    for (let i = 0; i < articleParagraphs.length; i++) {
+        articleParagraphs[i].style.fontFamily = localStorage.fontFamily
+        console.log(fontFamily[i].value)
+    }
+}
 
 changeColor()
+changeFontFamily()
