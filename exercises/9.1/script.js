@@ -8,7 +8,6 @@ let fontFamily = document.querySelectorAll('option')
 let articleParagraphs = document.querySelectorAll('article p')
 
 
-
 const changeColor = () => {
     for (let i = 0; i < articleParagraphs.length; i++) {
         articleParagraphs[i].style.color = localStorage.color
@@ -20,10 +19,17 @@ const changeColor = () => {
         backgroundColor.addEventListener('input', () => {
             localStorage.setItem('background', backgroundColor.value)
             articleParagraphs[i].style.backgroundColor = localStorage.background
+            
         })
     }
 }
 
+const buttonSize = () => {
+    for(let x = 0; x < articleParagraphs.length; x++){
+        let fontSizeValue = articleParagraphs[x].style.fontSize
+        console.log(fontSizeValue)
+    }
+}
 
+buttonSize()
 changeColor()
-changeFontFamily()
