@@ -8,6 +8,7 @@ let fontFamily = document.querySelectorAll('option')
 let articleParagraphs = document.querySelectorAll('article p')
 
 
+
 const changeColor = () => {
     for (let i = 0; i < articleParagraphs.length; i++) {
         articleParagraphs[i].style.color = localStorage.color
@@ -23,12 +24,6 @@ const changeColor = () => {
     }
 }
 
-const changeFontFamily = () => {
-    for (let i = 0; i < articleParagraphs.length; i++) {
-        articleParagraphs[i].style.fontFamily = localStorage.fontFamily
-        console.log(fontFamily[i].value)
-    }
-}
 
 changeColor()
 changeFontFamily()
