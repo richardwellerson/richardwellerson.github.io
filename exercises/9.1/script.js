@@ -12,7 +12,6 @@ const fontArial = document.querySelector('.arial')
 const fontCalibri = document.querySelector('.calibri')
 const fontTahoma = document.querySelector('.tahoma')
 
-
 const changeColor = () => {
     for (let i = 0; i < articleParagraphs.length; i++) {
         articleParagraphs[i].style.color = localStorage.color
@@ -32,8 +31,9 @@ const changeColor = () => {
 const buttonSize = () => {
     for(let x = 0; x < articleParagraphs.length; x++){
         let computedFontSize = window.getComputedStyle(articleParagraphs[x]).fontSize
-        
-        
+        largeFont.addEventListener('click', () => {
+           computedFontSize = (computedFontSize + 1)
+        })      
     }
 }
 
