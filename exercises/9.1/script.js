@@ -30,9 +30,11 @@ const changeColor = () => {
 
 const buttonSize = () => {
     for(let x = 0; x < articleParagraphs.length; x++){
-        let computedFontSize = window.getComputedStyle(articleParagraphs[x]).fontSize
+        const computedFontSize = window.getComputedStyle(articleParagraphs[x], null).getPropertyValue('font-size')
+        let stylish = parseFloat(computedFontSize)
         largeFont.addEventListener('click', () => {
-           computedFontSize = (computedFontSize + 1)
+           articleParagraphs[x].style.fontSize = (stylish + 1) + 'px'
+           console.log(computedFontSize)
         })      
     }
 }
