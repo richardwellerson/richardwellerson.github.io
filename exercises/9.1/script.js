@@ -1,11 +1,16 @@
-let textColor = document.getElementById('font')
-let backgroundColor = document.getElementById('background')
-let smallFont = document.querySelector('.small-font')
-let largeFont = document.querySelector('.large-font')
-let lessSpace = document.querySelector('.small-text-spacing')
-let mostSpace = document.querySelector('.large-text-spacing')
-let fontFamily = document.querySelectorAll('option')
-let articleParagraphs = document.querySelectorAll('article p')
+const textColor = document.getElementById('font')
+const backgroundColor = document.getElementById('background')
+const smallFont = document.querySelector('.small-font')
+const largeFont = document.querySelector('.large-font')
+const lessSpace = document.querySelector('.small-text-spacing')
+const mostSpace = document.querySelector('.large-text-spacing')
+const fontFamily = document.querySelectorAll('option')
+const articleParagraphs = document.querySelectorAll('article p')
+const fontVerdana = document.querySelector('.verdana')
+const fontHelvetica = document.querySelector('.helvetica')
+const fontArial = document.querySelector('.arial')
+const fontCalibri = document.querySelector('.calibri')
+const fontTahoma = document.querySelector('.tahoma')
 
 
 const changeColor = () => {
@@ -26,10 +31,12 @@ const changeColor = () => {
 
 const buttonSize = () => {
     for(let x = 0; x < articleParagraphs.length; x++){
-        let fontSizeValue = articleParagraphs[x].style.fontSize
-        console.log(fontSizeValue)
+        let computedFontSize = window.getComputedStyle(articleParagraphs[x]).fontSize
+        
+        
     }
 }
 
 buttonSize()
 changeColor()
+ 
