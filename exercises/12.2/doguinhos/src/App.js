@@ -29,8 +29,8 @@ class Content extends React.Component {
     alert('Múltiplo de 3')
   }
 
-  shouldComponentUpdate() {
-    return (this.props.myNumber % 3 === 0)
+  shouldComponentUpdate(nextprops) {
+    return (nextprops.myNumber % 3 === 0)
   }
 
   componentWillUnmount() {
