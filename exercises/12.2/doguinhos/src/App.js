@@ -24,7 +24,19 @@ class App extends React.Component {
 }
 
 class Content extends React.Component {
-  shouldComponentUpdate() { return this.props.myNumber % 3 === 0 }
+
+  componentDidUpdate() {
+    alert('Múltiplo de 3')
+  }
+
+  shouldComponentUpdate() {
+    return (this.props.myNumber % 3 === 0)
+  }
+
+  componentWillUnmount() {
+    localStorage.setItem('Valor',this.props.myNumber)
+  }
+
   render() {
     return (
       <div>
