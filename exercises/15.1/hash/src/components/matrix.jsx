@@ -1,16 +1,22 @@
 import React from 'react';
+import xBackground from './images/x.gif';
+import oBackground from './images/o.gif';
 
 class Matrix extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      backgroundImageX: 'white',
-      backgroundImageO: '',
-    }
+      xSelection: true,
+      oSelection: false,
+      imgs: {
+        xImg: `url(${xBackground})`,
+        oImg: `url(${oBackground})`,
+      }
+    };
   }
 
-  render() {
-    return (
+  table = () => {
+    return(
       <table>
         <tbody>
           <tr>
@@ -29,7 +35,23 @@ class Matrix extends React.Component {
             <td className="3.3"></td>
           </tr>
         </tbody>
-      </table>
+      </table >
+    )
+  }
+
+  showSelection = () => {
+    return(
+      <section>
+        <h4>Make your choice:</h4>
+        <div><img src={this.state.imgs.oImg}></img></div>
+        <div><img src={this.state.imgs.xImg}></img></div>
+      </section>
+    )
+  }
+
+  render() {
+    return (
+      
     )
   }
 }
