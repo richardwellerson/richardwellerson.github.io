@@ -1,6 +1,14 @@
 import React from 'react';
 
 class Matrix extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      backgroundImageX: 'white',
+      backgroundImageO: '',
+    }
+  }
+
   render() {
     return (
       <table>
