@@ -5,8 +5,8 @@ class Table extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      index: 0,
       hashValues: ['X', 'O'],
+      index: 1,
       tab11: '',
       tab12: '',
       tab13: '',
@@ -20,47 +20,48 @@ class Table extends React.Component {
   }
 
   changeStateValue(index, tabValue) {
+    const newIndex = index ? 0 : 1;
     this.setState({
-      index: index ? 0 : 1,
-      tabValue: this.state.hashValues[index],
+      index: newIndex,
+      [tabValue]: this.state.hashValues[newIndex],
     });
   }
 
   render() {
+    console.log(this.state)
     return (
       <table>
         <tbody>
           <tr>
-            <td
-              className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab11)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab11')}>
               <p className="Table_value_x-Or-o">{this.state.tab11}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab12)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab12')}>
               <p className="Table_value_x-Or-o">{this.state.tab12}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab13)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab13')}>
               <p className="Table_value_x-Or-o">{this.state.tab13}</p>
             </td>
           </tr>
           <tr>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab21)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab21')}>
               <p className="Table_value_x-Or-o">{this.state.tab21}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab22)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab22')}>
               <p className="Table_value_x-Or-o">{this.state.tab22}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab23)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab23')}>
               <p className="Table_value_x-Or-o">{this.state.tab23}</p>
             </td>
           </tr>
           <tr>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab31)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab31')}>
               <p className="Table_value_x-Or-o">{this.state.tab31}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab32)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab32')}>
               <p className="Table_value_x-Or-o">{this.state.tab32}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, this.state.tab33)}>
+            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab33')}>
               <p className="Table_value_x-Or-o">{this.state.tab33}</p>
             </td>
           </tr>
