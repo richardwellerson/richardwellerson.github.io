@@ -6,7 +6,7 @@ class Table extends React.Component {
     super(props);
     this.state = {
       hashValues: ['X', 'O'],
-      index: 1,
+      index: 0,
       tab11: '',
       tab12: '',
       tab13: '',
@@ -24,6 +24,12 @@ class Table extends React.Component {
       index: index ? 0 : 1,
       [tabValue]: this.state.hashValues[index],
     });
+    if (this.state[tabValue] === '') {
+      console.log('Tem que desabilitar o Clique');
+    }
+  }
+
+  componentDidUpdate() {
     this.validateWinnerHash();
   }
 
@@ -68,14 +74,17 @@ class Table extends React.Component {
       [
         accessState.tab13,
         accessState.tab22,
-        accessState.tab31
+        accessState.tab31,
       ],
     ];
-    console.log(stateValues[0][0])
+    stateValues.forEach(validateArray => {
+      if (validateArray[0] === 'X' && validateArray[1] === 'X' && validateArray[2] === 'X') {
+        console.log('Gueime Ôuve');
+      }
+    });
   }
 
   render() {
-    console.log(this.state)
     return (
       <table>
         <tbody>
