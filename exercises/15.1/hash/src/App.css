@@ -13,6 +13,7 @@ td {
 
 td:hover {
   background-color: rgb(235, 235, 235);
+  cursor: pointer;
 }
 
 .Hash_image-selection {
