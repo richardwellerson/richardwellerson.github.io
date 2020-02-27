@@ -20,11 +20,58 @@ class Table extends React.Component {
   }
 
   changeStateValue(index, tabValue) {
-    const newIndex = index ? 0 : 1;
     this.setState({
-      index: newIndex,
-      [tabValue]: this.state.hashValues[newIndex],
+      index: index ? 0 : 1,
+      [tabValue]: this.state.hashValues[index],
     });
+    this.validateWinnerHash();
+  }
+
+  validateWinnerHash() {
+    const accessState = this.state;
+    const stateValues = [
+      [
+        accessState.tab11,
+        accessState.tab12,
+        accessState.tab13,
+      ],
+      [
+        accessState.tab21,
+        accessState.tab22,
+        accessState.tab23,
+      ],
+      [
+        accessState.tab31,
+        accessState.tab32,
+        accessState.tab33,
+      ],
+      [
+        accessState.tab11,
+        accessState.tab21,
+        accessState.tab31,
+      ],
+      [
+        accessState.tab12,
+        accessState.tab22,
+        accessState.tab32,
+      ],
+      [
+        accessState.tab13,
+        accessState.tab23,
+        accessState.tab33
+      ],
+      [
+        accessState.tab11,
+        accessState.tab22,
+        accessState.tab33,
+      ],
+      [
+        accessState.tab13,
+        accessState.tab22,
+        accessState.tab31
+      ],
+    ];
+    console.log(stateValues[0][0])
   }
 
   render() {
