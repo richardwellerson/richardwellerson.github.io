@@ -28,4 +28,13 @@ describe('Hash game tests', () => {
     fireEvent.click(allClickedCells[4]);
     expect(allValuesCells[4].innerHTML).toBe('X');
   });
+  test('when the cell is clicked more than once, it does not change its value', () => {
+    const { getAllByTestId } = render(<App />);
+    const allValuesCells = getAllByTestId(/hashValue/i)
+    const allClickedCells = getAllByTestId(/hashClickedCell/i)
+    fireEvent.click(allClickedCells[0]);
+    expect(allValuesCells[0].innerHTML).toBe('X');
+    fireEvent.click(allClickedCells[0]);
+    expect(allValuesCells[0].innerHTML).toBe('X');
+  });
 });
