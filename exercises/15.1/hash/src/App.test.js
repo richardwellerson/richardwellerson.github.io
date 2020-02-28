@@ -5,7 +5,7 @@ import App from './App';
 afterEach(cleanup);
 
 describe('Hash game tests', () => {
-  test('renders learn react link', () => {
+  test('Renders Hash Game Title', () => {
     const { getByText } = render(<App />);
     const title = getByText("Hash Game");
     expect(title).toBeDefined();
@@ -36,5 +36,17 @@ describe('Hash game tests', () => {
     expect(allValuesCells[0].innerHTML).toBe('X');
     fireEvent.click(allClickedCells[0]);
     expect(allValuesCells[0].innerHTML).toBe('X');
+  });
+  test('Tic-tac-toe recognizes one condition for victory', () => {
+    const { getAllByTestId } = render(<App />);
+    window.alert = jest.fn();
+    const mockAlert = jest.spyOn(window, 'alert');
+    const allValuesCells = getAllByTestId(/hashValue/i);
+    fireEvent.click(allValuesCells[0]);
+    fireEvent.click(allValuesCells[8]);
+    fireEvent.click(allValuesCells[1]);
+    fireEvent.click(allValuesCells[7]);
+    fireEvent.click(allValuesCells[2]);
+    expect(mockAlert).toHaveBeenCalled();
   });
 });
