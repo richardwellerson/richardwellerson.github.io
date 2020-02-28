@@ -116,35 +116,35 @@ class Table extends React.Component {
       <table>
         <tbody>
           <tr>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab11')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab11')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab11}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab12')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab12')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab12}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab13')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab13')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab13}</p>
             </td>
           </tr>
           <tr>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab21')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab21')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab21}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab22')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab22')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab22}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab23')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab23')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab23}</p>
             </td>
           </tr>
           <tr>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab31')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab31')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab31}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab32')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab32')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab32}</p>
             </td>
-            <td className="Table_cell" onClick={() => this.changeStateValue(this.state.index, 'tab33')}>
+            <td className="Table_cell" data-testid="hashClickedCell" onClick={() => this.changeStateValue(this.state.index, 'tab33')}>
               <p data-testid="hashValue" className="Table_value_x-Or-o">{this.state.tab33}</p>
             </td>
           </tr>
