@@ -20,12 +20,12 @@ class Table extends React.Component {
   }
 
   changeStateValue(index, tabValue) {
-    this.setState({
-      index: index ? 0 : 1,
-      [tabValue]: this.state.hashValues[index],
-    });
-    if (this.state[tabValue] === '') {
-      console.log('Tem que desabilitar o Clique');
+    const stateAcess = this.state
+    if (stateAcess[tabValue] === '') {
+      this.setState({
+        index: index ? 0 : 1,
+        [tabValue]: this.state.hashValues[index],
+      });
     }
   }
 
@@ -77,11 +77,38 @@ class Table extends React.Component {
         accessState.tab31,
       ],
     ];
+
+    let isHaveWinner;
     stateValues.forEach(validateArray => {
       if (validateArray[0] === 'X' && validateArray[1] === 'X' && validateArray[2] === 'X') {
-        console.log('Gueime Ôuve');
+        isHaveWinner = true;
+        alert('Vencedor: X Player');
+        window.location.reload();
+      } else if (validateArray[0] === 'O' && validateArray[1] === 'O' && validateArray[2] === 'O') {
+        isHaveWinner = true;
+        alert('Vencedor: O Player');
+        window.location.reload();
       }
     });
+
+    const access = this.state;
+    const allStateValues = [
+      access.tab11,
+      access.tab12,
+      access.tab13,
+      access.tab21,
+      access.tab22,
+      access.tab23,
+      access.tab31,
+      access.tab32,
+      access.tab33,
+    ];
+
+    const decision = allStateValues.every(tab => tab !== "");
+    if (decision && !isHaveWinner) {
+      alert('Velha!')
+      window.location.reload();
+    }
   }
 
   render() {
@@ -122,7 +149,7 @@ class Table extends React.Component {
             </td>
           </tr>
         </tbody>
-      </table >
+      </table>
     );
   }
 }
