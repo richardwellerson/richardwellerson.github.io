@@ -17,7 +17,7 @@ describe('Hash game tests', () => {
       expect(cell.innerHTML).toBe('')
     ));
   });
-  test('when cell is clicked, hash value marks the spot', () => {
+  test('when cell is clicked, hash value marks the spot alternated times', () => {
     const { getAllByTestId } = render(<App />);
     const allValuesCells = getAllByTestId(/hashValue/i)
     const allClickedCells = getAllByTestId(/hashClickedCell/i)
@@ -25,5 +25,7 @@ describe('Hash game tests', () => {
     expect(allValuesCells[0].innerHTML).toBe('X');
     fireEvent.click(allClickedCells[2]);
     expect(allValuesCells[2].innerHTML).toBe('O');
+    fireEvent.click(allClickedCells[4]);
+    expect(allValuesCells[4].innerHTML).toBe('X');
   });
 });
