@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>Redux Example</title>
+  <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <span>Clicked: 0 Times</span>
+    <button type='button' id='increment'>+</button>
+    <button type='button' id='decrement'>-</button>
+    <button type='button' id='multi'>10</button>
+  </div>
+  <script>
+    function counterReducer(state = 0, action) {
+      switch (action.type) {
+        case 'INCREMENT':
+          return state + 1;
+        case 'DECREMENT':
+          return state - 1;
+        default: return state;
+      }
+    }
+
+    const store = redux.createStore(counterReducer);
+  </script>
+</body>
+
+</html>

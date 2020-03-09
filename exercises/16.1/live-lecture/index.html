@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Redux Basic Example</title>
+  <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+
+<body>
+  <div>
+    Clicked: <span id="current-count">0</span> times
+    <button id="increment" type="button">+</button>
+    <button id="decrement" type="button">-</button>
+    <button id="multi" type="button">Incrementa 10</button>
+  </div>
+  <script>
+    //Reducer
+    function counterReducer(state = 0, action) {
+      console.log(action);
+      console.log('Estado Atual:', state);
+      switch (action.type) {
+        case 'INCREMENT':
+          return state += action.value;
+        case 'DECREMENT':
+          return state -= action.value;
+        return state;
+      }
+    };
+
+    //Store
+    const store = Redux.createStore(counterReducer);
+
+    //Actions
+    document.getElementById('increment')
+      .addEventListener('click', () => {
+        store.dispatch({ type: 'INCREMENT', value: 1 });
+      });
+
+    document.getElementById('decrement')
+      .addEventListener('click', () => {
+        store.dispatch({ type: 'DECREMENT', value: 1 });
+      });
+
+    document.getElementById('multi')
+      .addEventListener('click', () => {
+        store.dispatch({ type: 'INCREMENT', value: 10 });
+      });
+
+    store.subscribe(() => document.getElementById('current-count').innerHTML = store.getState().toString());
+
+  </script>
+</body>
+
+</html>
