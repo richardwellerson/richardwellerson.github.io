@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -11,25 +12,34 @@
 </head>
 
 <body>
-    <div class=divFather>
-        <div class="stageDiv">
+    <div class=div-father>
+        <div class="stage-div">
             <h1 id=>Lista de Tarefas</h1>
-            <span>Clique duas vezes para marcar um item como completo.</span>
-            <input type="text" class="taskText">
-            <button class="addTask">+</button>
-
-            <div class="receiveOl">
-
+            <div class="legend">
+                <p>- Clicando uma vez, você seleciona a tarefa. (A tarefa fica com cor Verde.)</p>
+                <p>- Clicando duas vezes, você indica que a tarefa está completa. (A tarefa é tachada.)</p>
+                <p>- Você pode mover as tarefas selecionadas clicando nos botões ↑ e ↓.</p>
+                <p>- Caso a tarefa seja a primeira e a movendo para cima, ela será a ultima da lista.</p>
+                <p>- Caso a tarefa seja a ultima e a movendo para baixo, ela será a primeira da lista.</p>
             </div>
-
-            <div class="buttonBottom">   
-                <button class="cleanAll">Limpar Tudo</button>
-                <button class="cleanSel">Limpar Selecionado</button>
+            <div class="protract">
+                <span>Adicione sua tarefa:</span>
+                <input type="text" class="task-text">
+                <button class="add-task">+</button>
             </div>
-
+            <div class="receive-ol">
+                <ol></ol>
+            </div>
+            <div class="button-bottom">
+                <button class="clear-all">Limpar Tudo</button>
+                <button class="remove-selected">Remover Selecionado</button>
+                <button class="remove-completed">Remover Tarefas Completas</button>
+                <button class="up-move">↑</button>
+                <button class="down-move">↓</button>
+                <button class="save-content">Salvar</button>
+            </div>
         </div>
     </div>
-
     <script type="text/javascript" src="scripts.js"></script>
 </body>
 
