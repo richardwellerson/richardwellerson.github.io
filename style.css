@@ -1,21 +1,17 @@
-body{
-    font-family: Lato;
-    background-color: black;
-    color: black;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+body {
+  font-family: Lato;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-.link-color{
-    color: blue;
+.General {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  outline: 1px solid red;
+  width: auto;
 }
 
-.my-photo{
-    border-radius: 100px;
-}
-
-.back-box{
-    margin: 5% 5% 5% 5% ;
-    background-color: white;
-}
